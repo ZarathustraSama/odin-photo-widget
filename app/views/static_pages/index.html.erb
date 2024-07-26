@@ -1,0 +1,16 @@
+<h1>Photo Widget</h1>
+<%= form_with method: :get do |f| %>
+  <%= f.label :search, "Search with the user's id: " %>
+  <%= f.text_field :search %>
+  <%= f.submit "Search" %>
+<% end %>
+
+<% if @photos %>
+  <ul>
+    <% @photos.each do |photo| %>
+      <%= image_tag "https://live.staticflickr.com/#{photo.server}/#{photo.id}_#{photo.secret}.jpg", size: "150x200" %>
+    <% end %>
+  </ul>
+<% else %>
+  <p>Photos will be displayed here, if there are any!</p>
+<% end %>
