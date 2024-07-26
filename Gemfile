@@ -69,3 +69,7 @@ end
 gem "flickr", "~> 2.1"
 
 gem "figaro", "~> 1.2"
+
+gem "ruby-lsp", "~> 0.17.9"
+
+gem "rubocop", "~> 1.65"
